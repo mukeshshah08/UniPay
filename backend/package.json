@@ -1,0 +1,24 @@
+{
+  "name": "unipay-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "powershell -Command \"if (Get-Process -Name node -ErrorAction SilentlyContinue) { Write-Host 'Stopping existing Node processes...'; Get-Process -Name node | Stop-Process -Force; Start-Sleep -Seconds 2 }; node --watch src/index.js\"",
+    "start": "node src/index.js",
+    "dev:clean": "npm run kill-port && npm run dev",
+    "kill-port": "powershell -Command \"Get-Process -Name node -ErrorAction SilentlyContinue | Stop-Process -Force\"",
+    "dev:safe": "powershell -Command \"if (Get-Process -Name node -ErrorAction SilentlyContinue) { Write-Host 'Stopping existing Node processes...'; Get-Process -Name node | Stop-Process -Force; Start-Sleep -Seconds 2 }; npm run dev\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pdfkit": "^0.17.2",
+    "socket.io": "^4.8.1",
+    "uuid": "^9.0.1"
+  }
+}
