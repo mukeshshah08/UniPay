@@ -49,6 +49,6 @@ API
 - `POST /api/webhooks/:merchantId` – verify minimal HMAC and process events
 - `GET /api/health` – health check
 
-This is a teaching/demo scaffold; do not use in production without adding auth, rate limiting, PCI compliance, idempotency, retries, and comprehensive validation.
+This is a teaching/demo/practice scaffold; do not use in production without adding auth, rate limiting, PCI compliance, idempotency, retries, and comprehensive validation.
 
 
